@@ -1,0 +1,8 @@
+section {
+  overflow: hidden;
+  padding: rem(30) 0 rem(30) ;
+  
+  @include mobile-lg(){
+    padding: rem(15) 0 rem(15);
+  }
+}

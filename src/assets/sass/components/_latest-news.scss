@@ -1,0 +1,13 @@
+.latest-news {
+    .news-header {
+        width: 95%;
+        p {
+            @media(max-width:768px){
+                width: 75%!important;
+            }
+        }
+    }
+    .slick-prev, .slick-next {
+        top:-65px;
+    }
+}

@@ -1,0 +1,12 @@
+.twitter-news {
+    border-color: var(--bs-gray-400)!important;
+    .card {
+        .hashtag {
+            color: var(--bs-hashtag)!important;
+        }
+        .twitter-icon {
+            width:rem(25);
+            height:rem(25);
+        }
+    }
+}

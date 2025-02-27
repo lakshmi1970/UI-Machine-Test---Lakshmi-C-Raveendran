@@ -1,0 +1,29 @@
+.score-container {
+    background: url('../../../assets/img/rankng_bg.png') #F1E5F1 no-repeat center / cover;
+    .tab-content {
+           background: url('../../../assets/img/tab-bg.png') rgb(183,227,240) no-repeat center / cover;
+        .heading {
+            padding: rem(16) rem(35);
+        }
+    }
+    .nav-link{
+        background: $white-color;
+        border-color: var(--bs-nav-tabs-link-hover-border-color);
+        border-bottom: 0;
+        &.active,&:hover {
+            background: rgba(var(--bs-primary-rgb));
+            color: $white-color;
+        }
+    }
+
+    .badge {
+        &.rounded-circle {
+            width:rem(28);
+            height: rem(28);
+            line-height: 1.7;
+        }
+    }
+    .points {
+        background-color: var(--bs-secondary-bg);
+    }
+}

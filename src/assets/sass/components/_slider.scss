@@ -1,0 +1,28 @@
+.slick-arrow {
+    &:before {
+    color: var(--bs-secondary)!important;
+    font-size: rem(14);
+    border: rem(1) solid;
+    border-radius: 50%;
+    width: rem(22);
+    height: rem(22);
+    display: block;
+    line-height: rem(22);
+    }
+    &.slick-prev {
+        &:before {
+            content: "\276E";           
+        }
+    }
+    &.slick-next {
+        &:before {
+            content: "\276F";           
+        }    
+    }   
+    &:hover {
+        &::before {
+            background-color: var(--bs-secondary)!important;
+            color:var(--bs-white)!important;
+        }
+    }
+}

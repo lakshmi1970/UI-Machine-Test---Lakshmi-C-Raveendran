@@ -1,0 +1,11 @@
+ footer {
+    .social-icons {
+        li {
+            &:hover {
+                svg {
+                    fill: var(--bs-secondary);
+                }
+            }
+        }
+    }
+ }

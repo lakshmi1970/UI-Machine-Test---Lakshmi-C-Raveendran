@@ -1,0 +1,33 @@
+.live-matches {
+    .nav-link{
+        color: rgba(var(--bs-gray-500));
+        &.active {
+            background: rgba(var(--bs-primary-rgb));
+            color: rgba(var(--bs-white-rgb))!important;
+        }
+    } 
+    .wrapper {
+        .slick-track {
+            min-width: 100%;
+            display: flex;
+            padding: 0 rem(2);
+            .slick-slide {
+                min-width: rem(286);
+                .fixture-container {
+                    background: url("../../../assets/img/matchframe.png") #DDBFE7 no-repeat center / cover;
+                    .timer {
+                        width: 100%;
+                        span {
+                            border-color: $match-border!important;
+                        }
+                    }
+                    .vs-text {
+                        width: rem(34);
+                        height:rem(34);
+                        line-height: 2.3;
+                    }
+                }
+            }
+        }
+    }
+}
