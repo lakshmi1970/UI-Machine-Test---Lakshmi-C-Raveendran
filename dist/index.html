@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/plugins.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="assets/css/app.min.css" media="all">
+  <link rel="stylesheet" href="assets/css/ie.min.css" media="all">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon/favicon-16x16.png">
+  <title>title</title>
+</head>
+
+<body>
+  <main class="page-wrap">
+    <header class="fixed-lg-top w-100 z-3">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom border-color px-lg-2">
+        <div class="container-fluid px-lg-7 px-4 py-1 d-lg-flex d-inline-block">
+          <div class="row w-100 g-0 justify-content-between">
+            <a class="navbar-brand w-auto" href="#" target="_blank">
+              <img src="../assets/img/Logo.png" alt="Logo" width="130" height="40">
+            </a>
+            <button class="navbar-toggler border-color w-auto" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse gap-3 w-auto" id="primaryNavbar">
+              <form class="d-flex w-100 justify-content-end py-lg-0 pt-3">
+                <div class="search-wrapper position-relative d-flex justify-content-end">
+                  <svg width="15" height="15" viewBox="0 0 18 18" class="position-absolute top-50 ms-4 start-0 translate-middle" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.9375 0.0625C10.7268 0.0625 13.8125 3.14819 13.8125 6.9375C13.8125 8.58374 13.2351 10.093 12.2656 11.2773L17.7441 16.7559L16.7559 17.7441L11.2773 12.2656C10.093 13.2351 8.58374 13.8125 6.9375 13.8125C3.14819 13.8125 0.0625 10.7268 0.0625 6.9375C0.0625 3.14819 3.14819 0.0625 6.9375 0.0625ZM6.9375 1.4375C3.89209 1.4375 1.4375 3.89209 1.4375 6.9375C1.4375 9.98291 3.89209 12.4375 6.9375 12.4375C9.98291 12.4375 12.4375 9.98291 12.4375 6.9375C12.4375 3.89209 9.98291 1.4375 6.9375 1.4375Z" fill="#DAD2D8" />
+                  </svg>
+                  <input class="form-control mt-0 search rounded-pill ps-5 border-color border" type="search" placeholder="Search" aria-label="Search">
+                </div>
+              </form>
+              <div class="language-select d-flex py-lg-0 py-3 justify-content-end">
+                <select class="form-select bg-primary text-light p-0 m-0 border-0 text-end" id="languageSelect" aria-label="Language select">
+                  <option selected="selected">AR</option>
+                  <option value="es">ES</option>
+                  <option value="fr">FR</option>
+                  <option value="de">DE</option>
+                </select>
+              </div>
+              <a class="ticket d-block text-end" href="#">
+                <svg width="120" height="38" viewBox="0 0 133 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="path-1-inside-1_1_1247" fill="white">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C2.68629 0 0 2.68629 0 6V13.5123C3.57602 14.7479 6.13804 18.0815 6.13804 22C6.13804 25.9185 3.57602 29.2521 0 30.4877V38C0 41.3137 2.68629 44 6 44H127C130.314 44 133 41.3137 133 38V30.4886C129.423 29.2537 126.859 25.9194 126.859 22C126.859 18.0806 129.423 14.7463 133 13.5114V6C133 2.68629 130.314 0 127 0H6Z" />
+                  </mask>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C2.68629 0 0 2.68629 0 6V13.5123C3.57602 14.7479 6.13804 18.0815 6.13804 22C6.13804 25.9185 3.57602 29.2521 0 30.4877V38C0 41.3137 2.68629 44 6 44H127C130.314 44 133 41.3137 133 38V30.4886C129.423 29.2537 126.859 25.9194 126.859 22C126.859 18.0806 129.423 14.7463 133 13.5114V6C133 2.68629 130.314 0 127 0H6Z" fill="#FFB92E" />
+                  <path d="M0 13.5123H-1V14.2247L-0.326584 14.4574L0 13.5123ZM0 30.4877L-0.326585 29.5426L-1 29.7753V30.4877H0ZM133 30.4886H134V29.7759L133.326 29.5434L133 30.4886ZM133 13.5114L133.326 14.4566L134 14.2241V13.5114H133ZM1 6C1 3.23858 3.23858 1 6 1V-1C2.13401 -1 -1 2.13401 -1 6H1ZM1 13.5123V6H-1V13.5123H1ZM7.13804 22C7.13804 17.6301 4.28155 13.9337 0.326584 12.5671L-0.326584 14.4574C2.8705 15.5621 5.13804 18.5328 5.13804 22H7.13804ZM0.326585 31.4329C4.28155 30.0663 7.13804 26.3699 7.13804 22H5.13804C5.13804 25.4672 2.8705 28.4379 -0.326585 29.5426L0.326585 31.4329ZM1 38V30.4877H-1V38H1ZM6 43C3.23858 43 1 40.7614 1 38H-1C-1 41.866 2.13401 45 6 45V43ZM127 43H6V45H127V43ZM132 38C132 40.7614 129.761 43 127 43V45C130.866 45 134 41.866 134 38H132ZM132 30.4886V38H134V30.4886H132ZM125.859 22C125.859 26.3709 128.717 30.0681 132.674 31.4339L133.326 29.5434C130.128 28.4393 127.859 25.468 127.859 22H125.859ZM132.674 12.5661C128.717 13.9319 125.859 17.6291 125.859 22H127.859C127.859 18.532 130.128 15.5607 133.326 14.4566L132.674 12.5661ZM132 6V13.5114H134V6H132ZM127 1C129.761 1 132 3.23858 132 6H134C134 2.13401 130.866 -1 127 -1V1ZM6 1H127V-1H6V1Z" fill="black" mask="url(#path-1-inside-1_1_1247)" />
+                  <path d="M38.5 22.5C38.5 21.12 39.62 20 41 20V19C41 15 40 14 36 14H26C22 14 21 15 21 19V19.5C22.38 19.5 23.5 20.62 23.5 22C23.5 23.38 22.38 24.5 21 24.5V25C21 29 22 30 26 30H36C40 30 41 29 41 25C39.62 25 38.5 23.88 38.5 22.5Z" stroke="#2F1A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M29 14L29 30" stroke="#2F1A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                  <line x1="54" y1="1" x2="54" y2="43" stroke="#2F1A45" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4" />
+                  <path d="M70.128 17.358H67.806V28.5H65.466V17.358H63.144L63.198 15H70.092L70.128 17.358ZM71.2493 28.5V15H73.5893V28.5H71.2493ZM81.2984 15.27L81.0824 17.502C80.7044 17.286 80.0924 17.142 79.5524 17.142C78.0584 17.142 77.5004 18.024 77.5004 21.642C77.5004 25.494 78.0764 26.43 79.6244 26.43C80.2004 26.43 80.7044 26.286 81.1364 26.034L81.3344 28.23C80.8484 28.518 79.9664 28.716 79.2464 28.716C76.3844 28.716 75.1064 26.808 75.1064 21.624C75.1064 16.746 76.4204 14.784 79.2824 14.784C79.9304 14.784 80.8484 15 81.2984 15.27ZM90.1104 28.5H87.5364L85.4664 22.578H84.7644V28.5H82.4784V15H84.7464V20.544H85.5204L87.5364 15H90.0204L87.6264 21.48L90.1104 28.5ZM93.4128 26.196H97.1748L97.1208 28.5H91.1268V15H96.9408L96.9768 17.34H93.4128V20.4H96.4008V22.614H93.4128V26.196ZM104.651 17.358H102.329V28.5H99.9894V17.358H97.6674L97.7214 15H104.615L104.651 17.358ZM111.426 24.666C111.426 27.258 110.202 28.716 107.916 28.716C106.908 28.716 105.9 28.41 105.18 27.888L105.522 25.692C106.206 26.142 106.926 26.412 107.754 26.412C108.762 26.412 109.212 25.872 109.212 24.774C109.212 22.362 105.198 22.722 105.198 18.654C105.198 16.368 106.386 14.802 108.654 14.802C109.59 14.802 110.418 15 111.084 15.378L110.814 17.574C110.202 17.304 109.536 17.16 108.906 17.16C107.79 17.16 107.412 17.718 107.412 18.582C107.412 20.904 111.426 20.598 111.426 24.666Z" fill="#2F1A45" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg secondary-menu bg-primary">
+        <div class="container-fluid px-lg-7 px-4 py-1">
+          <div class="row g-0">
+            <button class="navbar-toggler border-color w-auto" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryNavbar" aria-controls="secondaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="secondaryNavbar">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item underline">
+                  <a class="nav-link text-white fw-bold" href="#">National Team</a>
+                </li>
+                <li class="nav-item underline">
+                  <a class="nav-link text-white fw-bold" href="#">Competitions</a>
+                </li>
+                <li class="nav-item underline">
+                  <a class="nav-link text-white fw-bold" href="#">Football in Qatar</a>
+                </li>
+                <li class="nav-item underline dropdown opacity-50-hover">
+                  <a class="text-white fw-bold nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Regulations <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.0218 6.96667L13.2946 6.2395L8.09375 11.4404L2.89288 6.2395L2.16571 6.96667L7.73016 12.5311L8.09375 12.8789L8.45734 12.5311L14.0218 6.96667Z" fill="white" stroke="white" stroke-width="0.8" />
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="#">Action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item underline dropdown opacity-50-hover">
+                  <a class="text-white fw-bold nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.0218 6.96667L13.2946 6.2395L8.09375 11.4404L2.89288 6.2395L2.16571 6.96667L7.73016 12.5311L8.09375 12.8789L8.45734 12.5311L14.0218 6.96667Z" fill="white" stroke="white" stroke-width="0.8" />
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="#">Action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item underline">
+                  <a class="nav-link text-white fw-bold" href="#">Football development</a>
+                </li>
+                <li class="nav-item underline dropdown opacity-50-hover">
+                  <a class="text-white fw-bold nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media Center <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.0218 6.96667L13.2946 6.2395L8.09375 11.4404L2.89288 6.2395L2.16571 6.96667L7.73016 12.5311L8.09375 12.8789L8.45734 12.5311L14.0218 6.96667Z" fill="white" stroke="white" stroke-width="0.8" />
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="#">Action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item underline">
+                  <a class="nav-link text-white fw-bold" href="#">Tenders</a>
+                </li>
+                <li class="nav-item underline">
+                  <a class="nav-link text-white fw-bold" href="#">Referees</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="banner pt-lg-2 p-0">
+      <div class="container-fluid px-lg-7 p-4 banner-container">
+        <div class="row position-relative h-100">
+          <ul class="text-end pt-lg-12 mt-lg-12 d-flex flex-column social-icons gap-3 align-items-end">
+            <li class="d-inline-block border rounded-circle text-center">
+              <a href="#" target="_blank" alt="Instagram">
+                <img src="../assets/img/insta.png" alt="Instagram">
+              </a>
+            </li>
+            <li class="d-inline-block border rounded-circle text-center">
+              <a href="#" target="_blank" alt="Youtube">
+                <img src="../assets/img/youtube.png" alt="Youtube">
+              </a>
+            </li>
+            <li class="d-inline-block border rounded-circle text-center">
+              <a href="#" target="_blank" alt="Facebook">
+                <img src="../assets/img/facebook.png" alt="Facebook">
+              </a>
+            </li>
+            <li class="d-inline-block border rounded-circle text-center">
+              <a href="#" target="_blank" alt="Twitter">
+                <img src="../assets/img/twitter.png" alt="Twitter">
+              </a>
+            </li>
+          </ul>
+          <div class="banner-content position-absolute bottom-50 top-50 translate-middle-y text-white w-75 ps-lg-4">
+            <h5 class="font-bold mb-1">01 - <span class="opacity-50">05</span>
+            </h5>
+            <h1 class="m-0 mb-2 display-4">WE ARE
+              <br>THE <span style="color: #ffb92e;">CHAMPIONS</span>
+            </h1>
+            <p class="w-50">Lorem ipsum dolor sit amet consectetur. Vestibulum metus non tortor pulvinar orci elementum nulla nunc. A diam quam et at viverra et.</p>
+            <ul class="p-0 m-0 d-flex gap-lg-4 gap-2 mt-4">
+              <li>
+                <a href="#" class="text-decoration-none text-white">
+                  <svg width="28" height="28" viewBox="0 0 40 40" fill="none" stroke="white" xmlns="http://www.w3.org/2000/svg" class="me-1">
+                    <rect width="40" height="40" rx="20" fill="none" stroke="white" />
+                    <path d="M16.1697 13.905V26.0948L17.0303 25.5328L25.637 19.9999L17.0303 14.4671L16.1697 13.905ZM17.2938 15.9601L23.5644 19.9999L17.2938 24.0398V15.9601Z" fill="#2F1A45" stroke="white" stroke-width="0.856481" />
+                  </svg> Fixtures
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-white">
+                  <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-1">
+                    <rect x="0.555556" y="0.555556" width="38.8889" height="38.8889" rx="19.4444" stroke="white" stroke-width="1.11111" />
+                    <path d="M20 12.6931C15.969 12.6931 12.6932 15.9689 12.6932 20C12.6932 24.031 15.969 27.3068 20 27.3068C24.0311 27.3068 27.3069 24.031 27.3069 20C27.3069 15.9689 24.0311 12.6931 20 12.6931ZM20 13.2552C23.7281 13.2552 26.7448 16.2719 26.7448 20C26.7448 23.7281 23.7281 26.7448 20 26.7448C16.272 26.7448 13.2552 23.7281 13.2552 20C13.2552 16.2719 16.272 13.2552 20 13.2552ZM20 14.3793C16.9021 14.3793 14.3794 16.902 14.3794 20C14.3794 23.0979 16.9021 25.6206 20 25.6206C23.098 25.6206 25.6207 23.0979 25.6207 20C25.6207 16.902 23.098 14.3793 20 14.3793ZM20 15.5034C22.4898 15.5034 24.4966 17.5102 24.4966 20C24.4966 22.4897 22.4898 24.4965 20 24.4965C17.5103 24.4965 15.5035 22.4897 15.5035 20C15.5035 17.5102 17.5103 15.5034 20 15.5034ZM20 16.6276C18.1448 16.6276 16.6276 18.1447 16.6276 20C16.6276 21.8552 18.1448 23.3724 20 23.3724C21.8553 23.3724 23.3724 21.8552 23.3724 20C23.3724 18.1447 21.8553 16.6276 20 16.6276ZM20 17.7517C21.2493 17.7517 22.2483 18.7507 22.2483 20C22.2483 21.2493 21.2493 22.2482 20 22.2482C18.7508 22.2482 17.7518 21.2493 17.7518 20C17.7518 18.7507 18.7508 17.7517 20 17.7517ZM20 18.8758C19.3787 18.8758 18.8759 19.3786 18.8759 20C18.8759 20.6213 19.3787 21.1241 20 21.1241C20.6214 21.1241 21.1242 20.6213 21.1242 20C21.1242 19.3786 20.6214 18.8758 20 18.8758Z" fill="white" stroke="white" stroke-width="0.856481" />
+                  </svg> Live Score
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-white">
+                  <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-1">
+                    <rect x="0.555556" y="0.555556" width="38.8889" height="38.8889" rx="19.4444" stroke="white" stroke-width="1.11111" />
+                    <path d="M22.8103 13.2551V26.7447H27.3069V13.2551H22.8103ZM23.9345 14.3793H26.1827V25.6206H23.9345V14.3793ZM12.6931 16.6275V26.7447H17.1897V16.6275H12.6931ZM13.8173 17.7517H16.0655V25.6206H13.8173V17.7517ZM17.7517 19.9999V26.7447H22.2483V19.9999H17.7517ZM18.8759 21.124H21.1241V25.6206H18.8759V21.124Z" fill="white" stroke="white" stroke-width="0.856481" />
+                  </svg> Statistics
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid py-2 border-bottom">
+        <div class="row">
+          <ul id="list-container" class="list-container d-flex gap-3 m-0 overflow-auto white-space-nowrap"></ul>
+        </div>
+      </div>
+    </section>
+    <section class="live-matches pt-lg-6 pt-5">
+      <div class="container-fluid px-lg-7 px-4">
+        <div class="row m-0">
+          <h2 class="display-5 font-black mb-2 primary-color px-md-2 p-0">
+            <span class="stencil-header text-white">LIVE</span> MATCHES
+          </h2>
+          <div class="px-2">
+            <ul class="nav nav-tabs bg-light w-auto border border-light p-2 rounded-2 d-inline-flex" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active font-bold text-light rounded-2 text-black-50" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">NATIONAL TEAM</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link font-bold text-light rounded-2 text-black-50" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">OTHER MATCHES</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content pt-md-4 px-0 pt-6" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="wrapper">
+                <div class="my-slider_1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_1.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_2.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_3.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_4.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_5.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_6.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_7.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_8.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_1.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_2.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_1.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_2.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="wrapper">
+                <div class="my-slider_2">
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_1.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_2.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_3.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_4.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_5.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_6.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_7.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_8.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_1.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_2.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="fixture-container primary-color rounded-3 p-1 pt-0">
+                      <span class="mx-auto rounded-bottom border-top d-block text-center bg-white w-75 py-1 border-2 primary-color">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                        </svg>
+                        <span class="display-10 primary-color">Saturday, May 12th</span>
+                      </span>
+                      <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_1.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Umm Salal SC<span></span>
+                          </span>
+                        </p>
+                        <span class="vs-text text-danger bg-white rounded-circle font-bold text-center">VS</span>
+                        <p class="text-uppercase font-bold display-10 text-center">
+                          <img src="../assets/img/team_2.png" alt="Team" width="80" height="80">
+                          <span class="d-block mt-3">Al-Duhail SC</span>
+                        </p>
+                      </div>
+                      <div class="bg-white rounded-bottom text-center fw-bold timer mx-auto py-4">
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">10</span> : <span class="display-9 border font-bold p-2 rounded-2 border-1">00</span>
+                        <span class="display-9 border font-bold p-2 rounded-2 border-1">PM</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="latest-news">
+      <div class="container-fluid px-lg-7 px-4">
+        <div class="row m-0">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item d-none">Home</li>
+              <li class="breadcrumb-item active p-0" aria-current="page">NEWS & UPDATES</li>
+            </ol>
+          </nav>
+          <div class="d-lg-flex justify-content-between align-items-end news-header mb-md-5 mb-2">
+            <h2 class="display-6 font-black primary-color p-md-0">
+              <span class="stencil-header text-white d-md-block">LATEST</span> NEWS & UPDATES
+            </h2>
+            <p class="p-0 w-50 mb-2">Lorem ipsum dolor sit amet consectetur. Vestibulum metus non tortor pulvinar orci elementum nulla nunc. A diam quam et at viverra et.</p>
+            <a href="#" alt="View all" class="primary-color fw-bold display-11 mb-2">View all</a>
+          </div>
+          <div class="wrapper p-0">
+            <div class="my-slider_3">
+              <div class="px-2">
+                <div class="card">
+                  <div class="zoom overflow-hidden">
+                    <img src="../assets/img/news_1.png" class="card-img-top" alt="News">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                      </svg>
+                      <span class="display-10">Saturday, May 12th</span>
+                    </h5>
+                    <p class="card-text font-bold display-9 mb-3">Japan Books Ticket to AFC U17 Asian Cup™ 2025 Finals, Seals Group F Top Spot</p>
+                    <a href="#" class="border bg-transparent rounded-pill me-1 border-2 font-bold display-10 text-decoration-none py-1 px-2 d-sm-inline-block d-block m-lg-0 mb-2 w-auto" alt="REFEREES">REFEREES</a>
+                    <a href="#" class="border bg-transparent rounded-pill border-2 font-bold text-uppercase display-10 text-decoration-none py-1 px-2 d-sm-inline-block d-block" alt="Football Development">Football Development</a>
+                  </div>
+                </div>
+              </div>
+              <div class="px-2">
+                <div class="card">
+                  <div class="zoom overflow-hidden">
+                    <img src="../assets/img/news_2.png" class="card-img-top" alt="News">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                      </svg>
+                      <span class="display-10">Saturday, May 12th</span>
+                    </h5>
+                    <p class="card-text font-bold display-9 mb-3">Japan Books Ticket to AFC U17 Asian Cup™ 2025 Finals, Seals Group F Top Spot</p>
+                    <a href="#" class="border bg-transparent rounded-pill me-1 border-2 font-bold display-10 text-decoration-none py-1 px-2 d-sm-inline-block d-block m-lg-0 mb-2 w-auto" alt="REFEREES">REFEREES</a>
+                    <a href="#" class="border bg-transparent rounded-pill border-2 font-bold text-uppercase display-10 text-decoration-none py-1 px-2 d-sm-inline-block d-block" alt="Football Development">Football Development</a>
+                  </div>
+                </div>
+              </div>
+              <div class="px-2">
+                <div class="card">
+                  <div class="zoom overflow-hidden">
+                    <img src="../assets/img/news_3.png" class="card-img-top" alt="News">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                      </svg>
+                      <span class="display-10">Saturday, May 12th</span>
+                    </h5>
+                    <p class="card-text font-bold display-9 mb-3">Japan Books Ticket to AFC U17 Asian Cup™ 2025 Finals, Seals Group F Top Spot</p>
+                    <a href="#" class="border bg-transparent rounded-pill me-1 border-2 font-bold display-10 text-decoration-none py-1 px-2 d-sm-inline-block d-block m-lg-0 mb-2 w-auto" alt="REFEREES">REFEREES</a>
+                    <a href="#" class="border bg-transparent rounded-pill border-2 font-bold text-uppercase display-10 text-decoration-none py-1 px-2 d-sm-inline-block d-block" alt="Football Development">Football Development</a>
+                  </div>
+                </div>
+              </div>
+              <div class="px-2">
+                <div class="card">
+                  <div class="zoom overflow-hidden">
+                    <img src="../assets/img/news_2.png" class="card-img-top" alt="News">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.125 0.5V1.125H0.625V14.875H14.375V1.125H11.875V0.5H10.625V1.125H4.375V0.5H3.125ZM1.875 2.375H3.125V3H4.375V2.375H10.625V3H11.875V2.375H13.125V3.625H1.875V2.375ZM1.875 4.875H13.125V13.625H1.875V4.875ZM5.625 6.125V7.375H6.875V6.125H5.625ZM8.125 6.125V7.375H9.375V6.125H8.125ZM10.625 6.125V7.375H11.875V6.125H10.625ZM3.125 8.625V9.875H4.375V8.625H3.125ZM5.625 8.625V9.875H6.875V8.625H5.625ZM8.125 8.625V9.875H9.375V8.625H8.125ZM10.625 8.625V9.875H11.875V8.625H10.625ZM3.125 11.125V12.375H4.375V11.125H3.125ZM5.625 11.125V12.375H6.875V11.125H5.625ZM8.125 11.125V12.375H9.375V11.125H8.125Z" fill="#2F1A45" />
+                      </svg>
+                      <span class="display-10">Saturday, May 12th</span>
+                    </h5>
+                    <p class="card-text font-bold display-9 mb-3">Japan Books Ticket to AFC U17 Asian Cup™ 2025 Finals, Seals Group F Top Spot</p>
+                    <a href="#" class="border bg-transparent rounded-pill me-1 border-2 font-bold display-10 text-decoration-none py-1 px-2 d-sm-inline-block d-block m-lg-0 mb-2 w-auto" alt="REFEREES">REFEREES</a>
+                    <a href="#" class="border bg-transparent rounded-pill border-2 font-bold text-uppercase display-10 text-decoration-none py-1 px-2 d-sm-inline-block d-block" alt="Football Development">Football Development</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="what-we">
+      <div class="container-fluid p-0">
+        <div class="row m-0">
+          <div class="col-lg-6 p-0">
+            <div class="know-more p-lg-10 p-4" style="background: url('../assets/img/what-we-bg.png') no-repeat center / cover;">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item d-none">Home</li>
+                  <li class="breadcrumb-item active p-0" aria-current="page">WHAT WE ARE</li>
+                </ol>
+              </nav>
+              <h2 class="display-5 font-black mt-2 mb-0 text-white p-0">
+                <span class="stencil-header text-white-50">FOOTBALL</span> IN QATAR
+              </h2>
+              <p class="display-9 text-white pe-8 my-4">Lorem ipsum dolor sit amet consectetur. Vestibulum metus non</p>
+              <a href="#" class="btn bg-white py-0 know-more-btn fw-bold">KNOW MORE <span class="border-start d-inline-block ms-2 ps-2">
+                  <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.01074 2.80957L8.06738 3.75293L14.8145 10.5L8.06738 17.2471L9.01074 18.1904L16.2295 10.9717L16.6807 10.5L16.2295 10.0283L9.01074 2.80957Z" fill="#2F1A45" stroke="#2F1A45" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 p-0">
+            <div class="rules p-lg-11 p-4" style="background: url('../assets/img/rule-bg.png') no-repeat center / cover;">
+              <div class="d-flex text-white gap-2 pt-5">
+                <svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.77084 52.3437C8.62625 52.3437 7.67709 51.3946 7.67709 50.25V19.5416C7.67709 7.2304 11.4179 3.48956 23.7292 3.48956H43.2708C55.5821 3.48956 59.3229 7.2304 59.3229 19.5416V47.4583C59.3229 47.905 59.3229 48.3237 59.295 48.7704C59.2113 49.915 58.1783 50.8083 57.0617 50.7246C55.9171 50.6408 55.0238 49.6358 55.1075 48.4912C55.1354 48.1562 55.1354 47.7933 55.1354 47.4583V19.5416C55.1354 9.5754 53.265 7.67706 43.2708 7.67706H23.7292C13.735 7.67706 11.8646 9.5754 11.8646 19.5416V50.25C11.8646 51.3946 10.9154 52.3437 9.77084 52.3437Z" fill="white" />
+                  <path d="M47.4583 63.5104H19.5417C13.0092 63.5104 7.67709 58.1783 7.67709 51.6458V49.8313C7.67709 44.2758 12.1996 39.7812 17.7271 39.7812H57.2292C58.3738 39.7812 59.3229 40.7304 59.3229 41.875V51.6458C59.3229 58.1783 53.9908 63.5104 47.4583 63.5104ZM17.7271 43.9688C14.4888 43.9688 11.8646 46.5929 11.8646 49.8313V51.6458C11.8646 55.8892 15.2983 59.3229 19.5417 59.3229H47.4583C51.7017 59.3229 55.1354 55.8892 55.1354 51.6458V43.9688H17.7271Z" fill="white" />
+                  <path d="M44.6667 21.6354H22.3333C21.1888 21.6354 20.2396 20.6863 20.2396 19.5417C20.2396 18.3971 21.1888 17.4479 22.3333 17.4479H44.6667C45.8113 17.4479 46.7604 18.3971 46.7604 19.5417C46.7604 20.6863 45.8113 21.6354 44.6667 21.6354Z" fill="white" />
+                  <path d="M36.2917 31.4063H22.3333C21.1888 31.4063 20.2396 30.4571 20.2396 29.3125C20.2396 28.1679 21.1888 27.2188 22.3333 27.2188H36.2917C37.4363 27.2188 38.3854 28.1679 38.3854 29.3125C38.3854 30.4571 37.4363 31.4063 36.2917 31.4063Z" fill="white" />
+                </svg>
+                <div>
+                  <h2 class="text-white my-3 fw-bold display-8">RULES & REGULATIONS</h2>
+                  <p class="display-9 mt-3">Lorem ipsum dolor sit amet consectetur. Vestibulum metus non</p>
+                  <a href="#" class="text-white fw-bold d-block learn-more">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="scoreboard pb-lg-8 pb-4">
+      <div class="container-fluid px-lg-11 px-4">
+        <div class="row">
+          <div class="score-container rounded">
+            <div class="col-lg-10 m-auto col-11 pt-lg-6 pb-lg-5 py-4">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item d-none">Home</li>
+                  <li class="breadcrumb-item active p-0" aria-current="page">TEAM TABLE</li>
+                </ol>
+              </nav>
+              <h2 class="display-5 font-black mb-2 primary-color p-0">
+                <span class="stencil-header text-white opacity-50">FOOTBALL</span> RANKING
+              </h2>
+              <ul class="nav nav-tabs border-0 d-md-flex d-block" id="myTab" role="tablist">
+                <li class="nav-item d-block" role="presentation">
+                  <button class="nav-link active font-bold p-4 rounded-top d-block w-100" id="fifa-tab" data-bs-toggle="tab" data-bs-target="#fifa" type="button" role="tab" aria-controls="fifa" aria-selected="true">FIFA WORLD RANKING</button>
+                </li>
+                <li class="nav-item d-block" role="presentation">
+                  <button class="nav-link font-bold p-4 rounded-top d-block w-100" id="asia-tab" data-bs-toggle="tab" data-bs-target="#asia" type="button" role="tab" aria-controls="asia" aria-selected="false">ASIAN TEAMS RANKING</button>
+                </li>
+                <li class="nav-item d-block" role="presentation">
+                  <button class="nav-link font-bold p-4 rounded-top d-block w-100" id="star-tab" data-bs-toggle="tab" data-bs-target="#star" type="button" role="tab" aria-controls="star" aria-selected="false">Ooredoo Stars League</button>
+                </li>
+              </ul>
+              <div class="tab-content text-center rounded-bottom" id="myTabContent">
+                <div class="tab-pane fade show active" id="fifa" role="tabpanel" aria-labelledby="fifa-tab">
+                  <div class="d-md-flex bg-light rounded-top heading">
+                    <div class="col-md-1 col fw-bold">POSITION</div>
+                    <div class="col-md-3 col fw-bold">TEAM</div>
+                    <div class="col-md-2 col fw-bold">POINTS</div>
+                    <div class="col-md-2 col fw-bold">PREVIOUS POINTS</div>
+                    <div class="col-md-4 col fw-bold">RECENT MATCHES RESULTS</div>
+                  </div>
+                  <ul class="list-group bg-transparent p-4 text-black">
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">01</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/argentina.png" alt="Argentina Flag" class="me-2" width="30">Argentina <span class="text-success display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9 7H2C1.58798 7 1.35279 6.52962 1.6 6.2L5.1 1.53333C5.3 1.26667 5.7 1.26667 5.9 1.53333L9.4 6.2C9.64721 6.52962 9.41202 7 9 7Z" fill="#15AA9C" stroke="#15AA9C" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">02</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/france.png" alt="France Flag" class="me-2" width="30">France <span class="text-danger display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 0.999999L9 1C9.41202 1 9.64721 1.47038 9.4 1.8L5.9 6.46667C5.7 6.73333 5.3 6.73333 5.1 6.46667L1.6 1.8C1.35279 1.47038 1.58798 0.999999 2 0.999999Z" fill="#CC1A44" stroke="#CC1A44" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">03</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/spain.png" alt="Spain Flag" class="me-2" width="30">Spain <span class="text-success display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9 7H2C1.58798 7 1.35279 6.52962 1.6 6.2L5.1 1.53333C5.3 1.26667 5.7 1.26667 5.9 1.53333L9.4 6.2C9.64721 6.52962 9.41202 7 9 7Z" fill="#15AA9C" stroke="#15AA9C" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">04</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/UK.png" alt="England Flag" class="me-2" width="30">England <span class="text-danger display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 0.999999L9 1C9.41202 1 9.64721 1.47038 9.4 1.8L5.9 6.46667C5.7 6.73333 5.3 6.73333 5.1 6.46667L1.6 1.8C1.35279 1.47038 1.58798 0.999999 2 0.999999Z" fill="#CC1A44" stroke="#CC1A44" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">05</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/brazil.png" alt="Brazil Flag" class="me-2" width="30">Brazil <span class="text-danger display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 0.999999L9 1C9.41202 1 9.64721 1.47038 9.4 1.8L5.9 6.46667C5.7 6.73333 5.3 6.73333 5.1 6.46667L1.6 1.8C1.35279 1.47038 1.58798 0.999999 2 0.999999Z" fill="#CC1A44" stroke="#CC1A44" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="asia" role="tabpanel" aria-labelledby="asia-tab">
+                  <div class="d-md-flex bg-light rounded-top heading">
+                    <div class="col-md-1 col fw-bold">POSITION</div>
+                    <div class="col-md-3 col fw-bold">TEAM</div>
+                    <div class="col-md-2 col fw-bold">POINTS</div>
+                    <div class="col-md-2 col fw-bold">PREVIOUS POINTS</div>
+                    <div class="col-md-4 col fw-bold">RECENT MATCHES RESULTS</div>
+                  </div>
+                  <ul class="list-group bg-transparent p-4 text-black">
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">01</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/argentina.png" alt="Argentina Flag" class="me-2" width="30">Argentina <span class="text-success display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9 7H2C1.58798 7 1.35279 6.52962 1.6 6.2L5.1 1.53333C5.3 1.26667 5.7 1.26667 5.9 1.53333L9.4 6.2C9.64721 6.52962 9.41202 7 9 7Z" fill="#15AA9C" stroke="#15AA9C" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">02</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/france.png" alt="France Flag" class="me-2" width="30">France <span class="text-danger display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 0.999999L9 1C9.41202 1 9.64721 1.47038 9.4 1.8L5.9 6.46667C5.7 6.73333 5.3 6.73333 5.1 6.46667L1.6 1.8C1.35279 1.47038 1.58798 0.999999 2 0.999999Z" fill="#CC1A44" stroke="#CC1A44" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">03</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/spain.png" alt="Spain Flag" class="me-2" width="30">Spain <span class="text-success display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9 7H2C1.58798 7 1.35279 6.52962 1.6 6.2L5.1 1.53333C5.3 1.26667 5.7 1.26667 5.9 1.53333L9.4 6.2C9.64721 6.52962 9.41202 7 9 7Z" fill="#15AA9C" stroke="#15AA9C" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">04</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/UK.png" alt="England Flag" class="me-2" width="30">England <span class="text-danger display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 0.999999L9 1C9.41202 1 9.64721 1.47038 9.4 1.8L5.9 6.46667C5.7 6.73333 5.3 6.73333 5.1 6.46667L1.6 1.8C1.35279 1.47038 1.58798 0.999999 2 0.999999Z" fill="#CC1A44" stroke="#CC1A44" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">05</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/brazil.png" alt="Brazil Flag" class="me-2" width="30">Brazil <span class="text-danger display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 0.999999L9 1C9.41202 1 9.64721 1.47038 9.4 1.8L5.9 6.46667C5.7 6.73333 5.3 6.73333 5.1 6.46667L1.6 1.8C1.35279 1.47038 1.58798 0.999999 2 0.999999Z" fill="#CC1A44" stroke="#CC1A44" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="star" role="tabpanel" aria-labelledby="star-tab">
+                  <div class="d-md-flex bg-light rounded-top heading">
+                    <div class="col-md-1 col fw-bold">POSITION</div>
+                    <div class="col-md-3 col fw-bold">TEAM</div>
+                    <div class="col-md-2 col fw-bold">POINTS</div>
+                    <div class="col-md-2 col fw-bold">PREVIOUS POINTS</div>
+                    <div class="col-md-4 col fw-bold">RECENT MATCHES RESULTS</div>
+                  </div>
+                  <ul class="list-group bg-transparent p-4 text-black">
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">01</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/argentina.png" alt="Argentina Flag" class="me-2" width="30">Argentina <span class="text-success display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9 7H2C1.58798 7 1.35279 6.52962 1.6 6.2L5.1 1.53333C5.3 1.26667 5.7 1.26667 5.9 1.53333L9.4 6.2C9.64721 6.52962 9.41202 7 9 7Z" fill="#15AA9C" stroke="#15AA9C" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">02</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/france.png" alt="France Flag" class="me-2" width="30">France <span class="text-danger display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 0.999999L9 1C9.41202 1 9.64721 1.47038 9.4 1.8L5.9 6.46667C5.7 6.73333 5.3 6.73333 5.1 6.46667L1.6 1.8C1.35279 1.47038 1.58798 0.999999 2 0.999999Z" fill="#CC1A44" stroke="#CC1A44" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">03</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/spain.png" alt="Spain Flag" class="me-2" width="30">Spain <span class="text-success display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9 7H2C1.58798 7 1.35279 6.52962 1.6 6.2L5.1 1.53333C5.3 1.26667 5.7 1.26667 5.9 1.53333L9.4 6.2C9.64721 6.52962 9.41202 7 9 7Z" fill="#15AA9C" stroke="#15AA9C" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">04</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/UK.png" alt="England Flag" class="me-2" width="30">England <span class="text-danger display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 0.999999L9 1C9.41202 1 9.64721 1.47038 9.4 1.8L5.9 6.46667C5.7 6.73333 5.3 6.73333 5.1 6.46667L1.6 1.8C1.35279 1.47038 1.58798 0.999999 2 0.999999Z" fill="#CC1A44" stroke="#CC1A44" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 mb-2 rounded">
+                      <div class="d-md-flex align-items-center p-2">
+                        <div class="col-md-1 col text-black">05</div>
+                        <div class="col-md-3 col text-black fw-bold">
+                          <img src="../assets/img/brazil.png" alt="Brazil Flag" class="me-2" width="30">Brazil <span class="text-danger display-11">
+                            <svg width="9" height="6" class="me=1" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 0.999999L9 1C9.41202 1 9.64721 1.47038 9.4 1.8L5.9 6.46667C5.7 6.73333 5.3 6.73333 5.1 6.46667L1.6 1.8C1.35279 1.47038 1.58798 0.999999 2 0.999999Z" fill="#CC1A44" stroke="#CC1A44" stroke-width="1.5" />
+                            </svg> +3
+                          </span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-2 col">
+                          <span class="points text-black badge rounded-pill">1883.5</span>
+                        </div>
+                        <div class="col-md-4 col">
+                          <span class="badge bg-success rounded-circle">W</span>
+                          <span class="badge bg-danger rounded-circle">L</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="twitter-news border-top border-opacity-25">
+      <div class="container-fluid px-lg-7 px-4">
+        <div class="row m-0">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-4 pb-3">
+              <li class="breadcrumb-item d-none">Home</li>
+              <li class="breadcrumb-item active p-0" aria-current="page">TWITTER FEEDS</li>
+            </ol>
+          </nav>
+          <div class="wrapper py-0 px-1">
+            <div class="my-slider_4">
+              <div class="px-2">
+                <div class="card border-0">
+                  <div class="position-relative zoom">
+                    <a href="#">
+                      <img src="../assets/img/twitt_1.png" class="card-img-top" alt="News">
+                      <span class="position-absolute bottom-0 m-3 bg-white rounded-circle d-block twitter-icon text-center">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.7191 8.73163L17.8697 1.73577L18.0217 1.56283H17.7914H16.3212H16.274L16.2429 1.59821L10.9429 7.62646L6.71611 1.60713L6.68499 1.56283H6.63086H1.66797H1.46754L1.58272 1.72685L8.04245 10.9259L1.58974 18.2649L1.43768 18.4378H1.66797H3.13833H3.18545L3.21656 18.4024L8.81839 12.0308L13.2865 18.3935L13.3176 18.4378H13.3717H18.3346H18.5351L18.4199 18.2738L11.7191 8.73163ZM14.1171 17.1957L9.6772 10.9817V10.9814L9.65779 10.9542L8.99852 10.0315L3.87057 2.85422H5.87291L10.075 8.73583L10.1598 8.67528L10.075 8.73583L10.7343 9.65853L16.1194 17.1957H14.1171Z" fill="black" stroke="black" stroke-width="0.208333" />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="card-body p-0 border-0">
+                    <h5 class="card-title mb-4 display-10 font-bold text-black lh-base my-3">
+                      <span class="hashtag">#AlAnnabi</span> is ready for tomorrow’s match!🔥🇶🇦 <span class="hashtag">#Our_Journey_To2026</span>
+                    </h5>
+                    <h6 class="display-11">2 hr ago</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="px-2">
+                <div class="card border-0">
+                  <div class="position-relative zoom">
+                    <a href="#">
+                      <img src="../assets/img/twitt_2.png" class="card-img-top" alt="News">
+                      <span class="position-absolute bottom-0 m-3 bg-white rounded-circle d-block twitter-icon text-center">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.7191 8.73163L17.8697 1.73577L18.0217 1.56283H17.7914H16.3212H16.274L16.2429 1.59821L10.9429 7.62646L6.71611 1.60713L6.68499 1.56283H6.63086H1.66797H1.46754L1.58272 1.72685L8.04245 10.9259L1.58974 18.2649L1.43768 18.4378H1.66797H3.13833H3.18545L3.21656 18.4024L8.81839 12.0308L13.2865 18.3935L13.3176 18.4378H13.3717H18.3346H18.5351L18.4199 18.2738L11.7191 8.73163ZM14.1171 17.1957L9.6772 10.9817V10.9814L9.65779 10.9542L8.99852 10.0315L3.87057 2.85422H5.87291L10.075 8.73583L10.1598 8.67528L10.075 8.73583L10.7343 9.65853L16.1194 17.1957H14.1171Z" fill="black" stroke="black" stroke-width="0.208333" />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="card-body p-0 border-0">
+                    <h5 class="card-title mb-4 display-10 font-bold text-black lh-base my-3">
+                      <span class="hashtag">#AlAnnabi</span> is ready for tomorrow’s match!🔥🇶🇦 <span class="hashtag">#Our_Journey_To2026</span>
+                    </h5>
+                    <h6 class="display-11">1 Aug 2023</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="px-2">
+                <div class="card border-0">
+                  <div class="position-relative zoom">
+                    <a href="#">
+                      <img src="../assets/img/twitt_1.png" class="card-img-top" alt="News">
+                      <span class="position-absolute bottom-0 m-3 bg-white rounded-circle d-block twitter-icon text-center">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.7191 8.73163L17.8697 1.73577L18.0217 1.56283H17.7914H16.3212H16.274L16.2429 1.59821L10.9429 7.62646L6.71611 1.60713L6.68499 1.56283H6.63086H1.66797H1.46754L1.58272 1.72685L8.04245 10.9259L1.58974 18.2649L1.43768 18.4378H1.66797H3.13833H3.18545L3.21656 18.4024L8.81839 12.0308L13.2865 18.3935L13.3176 18.4378H13.3717H18.3346H18.5351L18.4199 18.2738L11.7191 8.73163ZM14.1171 17.1957L9.6772 10.9817V10.9814L9.65779 10.9542L8.99852 10.0315L3.87057 2.85422H5.87291L10.075 8.73583L10.1598 8.67528L10.075 8.73583L10.7343 9.65853L16.1194 17.1957H14.1171Z" fill="black" stroke="black" stroke-width="0.208333" />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="card-body p-0 border-0">
+                    <h5 class="card-title mb-4 display-10 font-bold text-black lh-base my-3">
+                      <span class="hashtag">#AlAnnabi</span> is ready for tomorrow’s match!🔥🇶🇦 <span class="hashtag">#Our_Journey_To2026</span>
+                    </h5>
+                    <h6 class="display-11">20 Jul 2024</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="px-2">
+                <div class="card border-0">
+                  <div class="position-relative zoom">
+                    <a href="#">
+                      <img src="../assets/img/twitt_3.png" class="card-img-top" alt="News">
+                      <span class="position-absolute bottom-0 m-3 bg-white rounded-circle d-block twitter-icon text-center">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.7191 8.73163L17.8697 1.73577L18.0217 1.56283H17.7914H16.3212H16.274L16.2429 1.59821L10.9429 7.62646L6.71611 1.60713L6.68499 1.56283H6.63086H1.66797H1.46754L1.58272 1.72685L8.04245 10.9259L1.58974 18.2649L1.43768 18.4378H1.66797H3.13833H3.18545L3.21656 18.4024L8.81839 12.0308L13.2865 18.3935L13.3176 18.4378H13.3717H18.3346H18.5351L18.4199 18.2738L11.7191 8.73163ZM14.1171 17.1957L9.6772 10.9817V10.9814L9.65779 10.9542L8.99852 10.0315L3.87057 2.85422H5.87291L10.075 8.73583L10.1598 8.67528L10.075 8.73583L10.7343 9.65853L16.1194 17.1957H14.1171Z" fill="black" stroke="black" stroke-width="0.208333" />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="card-body p-0 border-0">
+                    <h5 class="card-title mb-4 display-10 font-bold text-black lh-base my-3">
+                      <span class="hashtag">#AlAnnabi</span> is ready for tomorrow’s match!🔥🇶🇦 <span class="hashtag">#Our_Journey_To2026</span>
+                    </h5>
+                    <h6 class="display-11">20 Jul 2024</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="px-2">
+                <div class="card border-0">
+                  <div class="position-relative zoom">
+                    <a href="#">
+                      <img src="../assets/img/twitt_2.png" class="card-img-top" alt="News">
+                      <span class="position-absolute bottom-0 m-3 bg-white rounded-circle d-block twitter-icon text-center">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.7191 8.73163L17.8697 1.73577L18.0217 1.56283H17.7914H16.3212H16.274L16.2429 1.59821L10.9429 7.62646L6.71611 1.60713L6.68499 1.56283H6.63086H1.66797H1.46754L1.58272 1.72685L8.04245 10.9259L1.58974 18.2649L1.43768 18.4378H1.66797H3.13833H3.18545L3.21656 18.4024L8.81839 12.0308L13.2865 18.3935L13.3176 18.4378H13.3717H18.3346H18.5351L18.4199 18.2738L11.7191 8.73163ZM14.1171 17.1957L9.6772 10.9817V10.9814L9.65779 10.9542L8.99852 10.0315L3.87057 2.85422H5.87291L10.075 8.73583L10.1598 8.67528L10.075 8.73583L10.7343 9.65853L16.1194 17.1957H14.1171Z" fill="black" stroke="black" stroke-width="0.208333" />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="card-body p-0 border-0">
+                    <h5 class="card-title mb-4 display-10 font-bold text-black lh-base my-3">
+                      <span class="hashtag">#AlAnnabi</span> is ready for tomorrow’s match!🔥🇶🇦 <span class="hashtag">#Our_Journey_To2026</span>
+                    </h5>
+                    <h6 class="display-11">2 hr ago</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="galery">
+      <div class="container-fluid px-lg-7 px-4">
+        <div class="row g-0">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb px-2">
+              <li class="breadcrumb-item d-none">Home</li>
+              <li class="breadcrumb-item active p-0" aria-current="page">MEDIA</li>
+            </ol>
+          </nav>
+          <div class="d-lg-flex justify-content-between align-items-center news-header px-2">
+            <h2 class="display-6 font-black primary-color p-md-0">
+              <span class="stencil-header text-white">IMAGES</span> & VIDEO
+            </h2>
+            <a href="#" alt="View all" class="primary-color fw-bold display-11">View all</a>
+          </div>
+          <div class="grid-container d-lg-grid d-flex flex-column gap-2 px-2">
+            <div class="grid-item zoom item1">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_1.png" data-caption="Optional caption" class="zoom">
+                <img src="../assets/img/Gallery_1.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item2">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_2.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_2.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item3">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_3.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_3.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item4">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_4.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_4.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item5">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_5.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_5.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item6">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_6.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_6.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item7">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_7.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_7.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item8">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_8.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_8.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item9">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_9.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_9.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item10">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_10.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_10.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item11">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_11.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_11.png" class="w-100 rounded">
+              </a>
+            </div>
+            <div class="grid-item zoom item12">
+              <a data-fancybox="gallery" href="../assets/img/Gallery_12.png" data-caption="Optional caption">
+                <img src="../assets/img/Gallery_12.png" class="w-100 rounded">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container-fluid p-0 bg-primary text-white position-relative overflow-hidden">
+      <div class="row">
+        <div class="col-lg-6 col-12 border-end ps-7 pt-6 border-none">
+          <img src="../assets/img/Logo.png" alt="Logo" width="150" height="50">
+          <p class="pt-3 display-10">Lorem ipsum dolor sit amet consectetur.
+            <br>Vestibulum metus non
+          </p>
+          <ul class="d-flex gap-4 social-icons p-0 mt-5 position-relative z-1">
+            <li>
+              <a href="#" class="instagram" target="_blank">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="white" />
+                  <g clip-path="url(#clip0_1_732)">
+                    <path d="M18.0028 13.8926C15.7341 13.8926 13.8975 15.7312 13.8975 17.9979C13.8975 20.2666 15.7361 22.1032 18.0028 22.1032C20.2715 22.1032 22.1081 20.2646 22.1081 17.9979C22.1081 15.7292 20.2695 13.8926 18.0028 13.8926ZM18.0028 20.6626C16.5301 20.6626 15.3381 19.4699 15.3381 17.9979C15.3381 16.5259 16.5308 15.3332 18.0028 15.3332C19.4748 15.3332 20.6675 16.5259 20.6675 17.9979C20.6681 19.4699 19.4755 20.6626 18.0028 20.6626Z" fill="white" />
+                    <path d="M21.2988 10.0512C19.8268 9.98257 16.1808 9.9859 14.7075 10.0512C13.4128 10.1119 12.2708 10.4246 11.3502 11.3452C9.81148 12.8839 10.0082 14.9572 10.0082 17.9979C10.0082 21.1099 9.83482 23.1352 11.3502 24.6506C12.8948 26.1946 14.9982 25.9926 18.0028 25.9926C21.0855 25.9926 22.1495 25.9946 23.2395 25.5726C24.7215 24.9972 25.8402 23.6726 25.9495 21.2932C26.0188 19.8206 26.0148 16.1752 25.9495 14.7019C25.8175 11.8932 24.3102 10.1899 21.2988 10.0512ZM23.6288 23.6326C22.6202 24.6412 21.2208 24.5512 17.9835 24.5512C14.6502 24.5512 13.3135 24.6006 12.3382 23.6226C11.2148 22.5046 11.4182 20.7092 11.4182 17.9872C11.4182 14.3039 11.0402 11.6512 14.7368 11.4619C15.5862 11.4319 15.8362 11.4219 17.9742 11.4219L18.0042 11.4419C21.5568 11.4419 24.3442 11.0699 24.5115 14.7659C24.5495 15.6092 24.5582 15.8626 24.5582 17.9972C24.5575 21.2919 24.6202 22.6366 23.6288 23.6326Z" fill="white" />
+                    <path d="M22.2708 14.6899C22.8006 14.6899 23.2301 14.2604 23.2301 13.7306C23.2301 13.2007 22.8006 12.7712 22.2708 12.7712C21.741 12.7712 21.3115 13.2007 21.3115 13.7306C21.3115 14.2604 21.741 14.6899 22.2708 14.6899Z" fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_732">
+                      <rect width="16" height="16" fill="white" transform="translate(10 10)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="Youtube" target="_blank">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="white" />
+                  <g clip-path="url(#clip0_1_735)">
+                    <path d="M25.6462 13.9524L25.6662 14.083C25.4729 13.397 24.9509 12.8677 24.2875 12.675L24.2735 12.6717C23.0262 12.333 18.0069 12.333 18.0069 12.333C18.0069 12.333 13.0002 12.3264 11.7402 12.6717C11.0642 12.8677 10.5415 13.397 10.3515 14.069L10.3482 14.083C9.8822 16.517 9.87886 19.4417 10.3689 22.0477L10.3482 21.9157C10.5415 22.6017 11.0635 23.131 11.7269 23.3237L11.7409 23.327C12.9869 23.6663 18.0075 23.6664 18.0075 23.6664C18.0075 23.6664 23.0135 23.6663 24.2742 23.327C24.9509 23.131 25.4735 22.6017 25.6635 21.9297L25.6669 21.9157C25.8789 20.7837 26.0002 19.481 26.0002 18.1504C26.0002 18.1017 26.0002 18.0524 25.9995 18.003C26.0002 17.9577 26.0002 17.9037 26.0002 17.8497C26.0002 16.5184 25.8789 15.2157 25.6462 13.9524ZM16.4055 20.4337V15.5717L20.5829 18.0064L16.4055 20.4337Z" fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_735">
+                      <rect width="16" height="16" fill="white" transform="translate(10 10)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="Facebook" target="_blank">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="white" />
+                  <path d="M20.665 12.6567H22.1257V10.1127C21.8737 10.078 21.007 10 19.9977 10C17.8917 10 16.449 11.3247 16.449 13.7593V16H14.125V18.844H16.449V26H19.2983V18.8447H21.5283L21.8823 16.0007H19.2977V14.0413C19.2983 13.2193 19.5197 12.6567 20.665 12.6567Z" fill="white" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="Twitter" target="_blank">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="white" />
+                  <path d="M19.3768 16.9847L24.2973 11.388L24.4189 11.2497H24.2347H23.0585H23.0208L22.9959 11.278L18.7559 16.1006L15.3744 11.2851L15.3496 11.2497H15.3062H11.3359H11.1756L11.2677 11.3809L16.4355 18.7401L11.2734 24.6113L11.1517 24.7497H11.3359H12.5122H12.5499L12.5748 24.7214L17.0563 19.6241L20.6308 24.7142L20.6557 24.7497H20.699H24.6693H24.8296L24.7375 24.6185L19.3768 16.9847ZM21.2952 23.756L17.7433 18.7848V18.7845L17.7278 18.7628L17.2004 18.0246L13.098 12.2828H14.6999L18.0616 16.9881L18.1294 16.9396L18.0616 16.9881L18.589 17.7262L22.8971 23.756H21.2952Z" fill="white" stroke="white" stroke-width="0.166667" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="row">
+            <div class="col-lg-6 col-12 border-end border-bottom p-lg-4 pt-lg-6 px-8 pt-4 border-none">
+              <h3 class="display-9 fw-bold mb-3">QUICK LINKS</h3>
+              <ul class="p-0 display-10 d-flex flex-column gap-2 mb-0">
+                <li class="underline">
+                  <a href="#" class="text-white text-decoration-none" alt="Home" target="_blank">Home</a>
+                </li>
+                <li class="underline">
+                  <a href="#" class="text-white text-decoration-none" alt="Competitions" target="_blank">Competitions</a>
+                </li>
+                <li class="underline">
+                  <a href="#" class="text-white text-decoration-none" alt="Football in Qatar" target="_blank">Football in Qatar</a>
+                </li>
+                <li class="underline">
+                  <a href="#" class="text-white text-decoration-none" alt="About us" target="_blank">About us</a>
+                </li>
+                <li class="underline">
+                  <a href="#" class="text-white text-decoration-none" alt="Careers" target="_blank">Careers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-12 p-lg-4 pt-lg-6 px-8 pt-4">
+              <h3 class="display-9 fw-bold mb-3">LOCATION</h3>
+              <p class="p-0 display-10 d-flex flex-column gap-2 m-0 lh-base">Al-Bidda Tower, Cornich
+                <br>Fax: 44754300
+                <br>P.O.Box: 5333
+                <br>Doha - Qatar
+              </p>
+            </div>
+            <div class="col-lg-6 col-12 border-end p-lg-4 pt-lg-6 px-8 pt-4 border-none">
+              <h3 class="display-9 fw-bold mb-3">PRIVACY POLICY</h3>
+              <ul class="p-0 display-10 d-flex flex-column gap-2 mb-0">
+                <li class="underline">
+                  <a href="#" class="text-white text-decoration-none" alt="Terms of Use" target="_blank">Terms of Use</a>
+                </li>
+                <li class="underline">
+                  <a href="#" class="text-white text-decoration-none" alt="Competitions" target="_blank">Competitions</a>
+                </li>
+                <li class="underline">
+                  <a href="#" class="text-white text-decoration-none" alt="Football in Qatar" target="_blank">Football in Qatar</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-12 border-top p-lg-4 pt-lg-6 px-8 pt-4 border-none mb-lg-0 mb-5">
+              <h3 class="display-9 fw-bold mb-3">CONTACT US</h3>
+              <ul class="p-0 display-10 d-flex flex-column gap-2">
+                <li class="underline">Phone: <a href="tel:44754444" class="text-white text-decoration-none">44754444</a>
+                </li>
+                <li class="underline">
+                  <a href="mailto:info@qfa.qa" class="text-white text-decoration-none">info@qfa.qa</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="../assets/img/footer_ball.png" alt="Ball" width="618" height="618" class="w-auto h-auto position-absolute border-0 spinner-border top-50 bottom-0 z-0 start-0 d-md-block d-none">
+    </div>
+    <div class="container-fluid p-7 bg-primary text-white border-top border-color position-relative z-1">
+      <div class="row">
+        <div class="col">
+          <ul class="d-flex p-0 justify-content-center gap-8 flex-wrap">
+            <li class="text-center d-flex flex-column align-items-center justify-content-between">
+              <img src="../assets/img/QIB.png" alt="" width="120">
+              <p class="mt-2 mb-0">Official Bank</p>
+            </li>
+            <li class="text-center d-flex flex-column align-items-center justify-content-between">
+              <img src="../assets/img/Birla.png" alt="" width="40">
+              <p class="mt-2 mb-0">Official Energy Partner</p>
+            </li>
+            <li class="text-center d-flex flex-column align-items-center justify-content-between">
+              <img src="../assets/img/Qatar.png" alt="" width="120">
+              <p class="mt-2 mb-0">Official Carrier</p>
+            </li>
+            <li class="text-center d-flex flex-column align-items-center justify-content-between">
+              <img src="../assets/img/Alkass.png" alt="" width="120">
+              <p class="mt-2 mb-0">Official Broadcaster Partner</p>
+            </li>
+            <li class="text-center d-flex flex-column align-items-center justify-content-between">
+              <img src="../assets/img/oredoo.png" alt="" width="120">
+              <p class="mt-2 mb-0">Official Telecommunication Partner</p>
+            </li>
+            <li class="text-center d-flex flex-column align-items-center justify-content-between">
+              <img src="../assets/img/AlAbdul.png" alt="" width="120">
+              <p class="mt-2 mb-0">Official Mobility Partner</p>
+            </li>
+            <li class="text-center d-flex flex-column align-items-center justify-content-between">
+              <img src="../assets/img/talabat.png" alt="" width="120">
+              <p class="mt-2 mb-0">Official Delivery Partner</p>
+            </li>
+            <li class="text-center d-flex flex-column align-items-center justify-content-between">
+              <img src="../assets/img/look.png" alt="" width="120">
+              <p class="mt-2 mb-0">Official Branding Partner</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-secondary py-4 text-center">
+      <p class="m-0 text-light fw-lighter opacity-75 fs-6">Powered by Qatar Football Association</p>
+    </div>
+  </footer>
+  <script defer="defer" src="assets/js/jquery.min.js"></script>
+  <script defer="defer" src="assets/js/plugins.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer="defer" src="assets/js/app.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+</body>
+
+</html>
